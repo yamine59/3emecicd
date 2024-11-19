@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5173',
+    origin: 'https://01-web.formation-adapeco-sofip.com',
 }));
 
 
