@@ -14,25 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Étape 2 : Installer les dépendances et construire le projet
-      - name: Install dependencies and build (Backend)
-        run: |
-          cd backcicd
-          npm install
-
       # Étape 2 : Installer les dépendances et construire le projet (Frontend)
       - name: Install dependencies and build (Frontend)
         run: |
-          cd frontcicd
           npm install
           npm run build
-
-      # Étape 3 : Déplacer le frontend vers le backend
-      - name: Move frontend to backend
-        run: |
-          rm -rf backcicd/public
-          mkdir -p backcicd/public
-          mv frontcicd/dist/* backcicd/public/
 
       # Étape 4 : Déploiement via FTP
       - name: Deploy via FTP
@@ -42,6 +28,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /02/
-          local-dir: backcicd/public/
+          local-dir: dist/
         env:
           FTP_VERBOSE: true
