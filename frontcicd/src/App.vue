@@ -4,7 +4,7 @@
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <h1>test cicd front et backd 22222222222222 test</h1>
+      <h1>test cicd front et back test</h1>
       <h2>{{ test }}</h2>
     </div>
   </header>
