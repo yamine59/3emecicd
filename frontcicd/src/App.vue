@@ -20,7 +20,7 @@ import { onMounted, ref } from 'vue';
 
 const test = ref(null);
 //fffff
-fetch('https://planify-back-production.up.railway.app/users/test', {  // URL complète du backend
+fetch('https://planify-back-production.up.railway.app/api/users/test', {  // URL complète du backend
   method: 'GET',
 })
   .then(response => {
