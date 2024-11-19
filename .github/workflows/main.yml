@@ -29,6 +29,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /02/
-          local-dir: dist/
+          local-dir: frontcicd/dist/
         env:
           FTP_VERBOSE: true
